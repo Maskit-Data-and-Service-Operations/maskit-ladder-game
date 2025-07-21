@@ -1,0 +1,200 @@
+.ladder-game {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.setup {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.player-setup, .result-setup {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.player-setup h3, .result-setup h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.player-inputs, .result-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.player-inputs input, .result-inputs input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.player-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.player-controls button {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.player-controls button:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.player-controls button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.start-button {
+  padding: 15px 40px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  align-self: center;
+}
+
+.start-button:hover {
+  background: #218838;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.game-board {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.players-row, .results-row {
+  position: relative;
+  width: 600px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.canvas-container {
+  position: relative;
+  margin: -10px 0;
+  z-index: 1;
+}
+
+.player-button {
+  position: absolute;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+  min-width: 80px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.player-button:hover {
+  transform: translateX(-50%) translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.player-button.selected {
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
+  font-weight: bold;
+}
+
+.ladder-canvas {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  display: block;
+}
+
+.result {
+  position: absolute;
+  padding: 10px 15px;
+  background: #f8f9fa;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s;
+  white-space: nowrap;
+  min-width: 80px;
+  text-align: center;
+}
+
+.result.selected {
+  background: #ffc107;
+  border-color: #ffc107;
+  font-weight: bold;
+  transform: translateX(-50%) scale(1.1);
+}
+
+.result-message {
+  font-size: 20px;
+  font-weight: bold;
+  color: #28a745;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  animation: fadeIn 0.5s;
+}
+
+.reset-button {
+  padding: 12px 30px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reset-button:hover {
+  background: #5a6268;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
