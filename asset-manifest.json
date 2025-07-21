@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/maskit-ladder-game/static/css/main.fb78a81b.css",
+    "main.js": "/maskit-ladder-game/static/js/main.40c5ec2f.js",
+    "index.html": "/maskit-ladder-game/index.html",
+    "main.fb78a81b.css.map": "/maskit-ladder-game/static/css/main.fb78a81b.css.map",
+    "main.40c5ec2f.js.map": "/maskit-ladder-game/static/js/main.40c5ec2f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb78a81b.css",
+    "static/js/main.40c5ec2f.js"
+  ]
+}
